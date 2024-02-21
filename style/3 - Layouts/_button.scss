@@ -1,0 +1,40 @@
+@import "./../1\ -\ helpers/_variables";
+@import "./../1\ -\ helpers/_mixins";
+
+
+.button-small{
+    background-color: #eef0f2;
+    border-radius: 24px;
+    font-size: 18px;
+    width: 129px;
+    height: 48px;
+    color: $secondaryColor;
+    transition: transform 1s ease;
+}
+.button-small:hover, .largebutton:hover{
+    transform: scale(1.1);
+}
+#home-nav.sticky .button-small{
+    background-color: $primaryColor;
+    transition: background-color 2s ease;
+}
+
+.largebutton{
+    width: 168px;
+    height: 50px;
+    border-radius: 32px;
+    box-shadow: 0 10px 20px -8px transparent;
+    font-size: 20px;
+    transition: transform 1s ease;
+}
+
+.largebutton.outline-button{
+    background-color: $secondaryColor2;
+    color: $primaryColor;
+}
+
+.largebutton.green{
+    background-color: $primaryColor;
+    color: $secondaryColor2;
+}
+

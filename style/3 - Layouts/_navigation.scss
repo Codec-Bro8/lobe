@@ -1,0 +1,45 @@
+@import "./../1\ -\ helpers/_mixins";
+
+.nav{
+    @include flexCenter(row, space-between, center);
+    padding: 20px 65px;
+    height: 80px;
+    z-index: 10;
+
+    .logo svg{
+        width: 85px;
+    }
+    a{
+        color: #767676;
+        font-size: 18px;
+        transition: all 1s ease;
+        font-weight: 500;
+    }
+    a:hover{
+        color: $secondaryColor;
+        font-size: 19px;
+        
+    }
+    .link-container{
+        @include flexCenter(row, space-between, center);
+        a{
+            padding: 0 25px;
+        }
+    }
+}
+
+#home-nav {
+    /* Your regular navbar styles */
+    position: relative;
+    transition: top 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  #home-nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999; /* Ensure it stays above other content */
+    background-color: #fffffff5; /* Adjust as needed */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  

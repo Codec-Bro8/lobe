@@ -1,0 +1,216 @@
+body main, body .home-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .home-body {
+  position: relative;
+  max-width: 100%;
+  min-height: calc(100vh - 80px);
+  margin: 0 64px;
+}
+body .home-body .herosection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 1140px;
+  padding: 0 115px;
+  transform: translateY(-45px);
+}
+body .home-body .herosection .herotext {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+body .home-body .herosection .herotext span#dynamic-text {
+  line-height: 0px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.4s ease-in-out;
+  scale: 1; /* Define animation properties */
+}
+body .home-body .herosection .herotext #dynamic-text.visible {
+  opacity: 1; /* Fully visible */
+  scale: 0;
+}
+body .home-body .herosection .herotext .section-text {
+  font-size: 26px;
+  font-weight: 600;
+}
+body .home-body .herosection .hero-video video {
+  width: 130%;
+}
+body .home-body .herosection .hero-buttons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+}
+body .home-body .herosection .hero-arrow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  animation: floating 2s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px 65px;
+  height: 80px;
+  z-index: 10;
+}
+.nav .logo svg {
+  width: 85px;
+}
+.nav a {
+  color: #767676;
+  font-size: 18px;
+  transition: all 1s ease;
+  font-weight: 500;
+}
+.nav a:hover {
+  color: #333;
+  font-size: 19px;
+}
+.nav .link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.nav .link-container a {
+  padding: 0 25px;
+}
+
+#home-nav {
+  /* Your regular navbar styles */
+  position: relative;
+  transition: top 0.3s ease-in-out; /* Smooth transition */
+}
+
+#home-nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; /* Ensure it stays above other content */
+  background-color: rgba(255, 255, 255, 0.9607843137); /* Adjust as needed */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.button-small {
+  background-color: #eef0f2;
+  border-radius: 24px;
+  font-size: 18px;
+  width: 129px;
+  height: 48px;
+  color: #333;
+  transition: transform 1s ease;
+}
+
+.button-small:hover, .largebutton:hover {
+  transform: scale(1.1);
+}
+
+#home-nav.sticky .button-small {
+  background-color: #04ddb2;
+  transition: background-color 2s ease;
+}
+
+.largebutton {
+  width: 168px;
+  height: 50px;
+  border-radius: 32px;
+  box-shadow: 0 10px 20px -8px transparent;
+  font-size: 20px;
+  transition: transform 1s ease;
+}
+
+.largebutton.outline-button {
+  background-color: #fff;
+  color: #04ddb2;
+}
+
+.largebutton.green {
+  background-color: #04ddb2;
+  color: #fff;
+}
+
+video {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  color: #333;
+  font-family: "Darker Grotesque", "Bahnschrift";
+  background-color: #fff;
+}
+body h1, body h2, body span {
+  font-size: 80px;
+  font-weight: 900;
+}
+body h3 {
+  font-size: 40px;
+  font-weight: 600;
+}
+body a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #333;
+}
+body span {
+  color: #04ddb2;
+}
+body button {
+  color: #fff;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}/*# sourceMappingURL=globalstyles.css.map */

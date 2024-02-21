@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobe | Machine Learning Made Easy</title>
+    <link rel="shortcut icon" href="images/lobe-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style/2 - base/globalstyles.css" class="href">
+</head>
+<body>
+    <nav id="home-nav" class="nav">
+        <div class="logo"><svg width="196px" height="52px" viewBox="0 0 196 52" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><path d="M14.7318403,-3.55271368e-15 L23.7444592,-3.13837756e-15 C27.3105342,-3.7934549e-15 28.6036791,0.371302445 29.9073828,1.06853082 C31.2110865,1.76575919 32.2342408,2.78891348 32.9314692,4.09261719 C33.6286976,5.39632089 34,6.68946584 34,10.2555408 L34,23.7444592 C34,27.3105342 33.6286976,28.6036791 32.9314692,29.9073828 C32.2342408,31.2110865 31.2110865,32.2342408 29.9073828,32.9314692 C28.6036791,33.6286976 27.3105342,34 23.7444592,34 L10.2555408,34 C6.68946584,34 5.39632089,33.6286976 4.09261719,32.9314692 C2.78891348,32.2342408 1.76575919,31.2110865 1.06853082,29.9073828 C0.371302445,28.6036791 -1.02954229e-16,27.3105342 1.77192988e-16,23.7444592 L0,15.0409072 L0,15.0409072 L14.7318403,-3.55271368e-15 Z" id="header-logo-path-1"></path><path d="M10.2555408,-3.9670498e-15 L23.7444592,-3.13837756e-15 C27.3105342,-3.7934549e-15 28.6036791,0.371302445 29.9073828,1.06853082 C31.2110865,1.76575919 32.2342408,2.78891348 32.9314692,4.09261719 C33.6286976,5.39632089 34,6.68946584 34,10.2555408 L34,19 L34,19 L19.5,34 L10.2555408,34 C6.68946584,34 5.39632089,33.6286976 4.09261719,32.9314692 C2.78891348,32.2342408 1.76575919,31.2110865 1.06853082,29.9073828 C0.371302445,28.6036791 1.60494146e-16,27.3105342 -2.76224082e-16,23.7444592 L2.76224082e-16,10.2555408 C-1.60494146e-16,6.68946584 0.371302445,5.39632089 1.06853082,4.09261719 C1.76575919,2.78891348 2.78891348,1.76575919 4.09261719,1.06853082 C5.39632089,0.371302445 6.68946584,-3.31197246e-15 10.2555408,-3.9670498e-15 Z" id="header-logo-path-3"></path><path d="M33.999,18 L34,23.7444592 C34,27.3105342 33.6286976,28.6036791 32.9314692,29.9073828 C32.2342408,31.2110865 31.2110865,32.2342408 29.9073828,32.9314692 C28.6036791,33.6286976 27.3105342,34 23.7444592,34 L18,34 L18,28.2555408 C18,24.6894658 18.3713024,23.3963209 19.0685308,22.0926172 C19.7657592,20.7889135 20.7889135,19.7657592 22.0926172,19.0685308 C23.3963209,18.3713024 24.6894658,18 28.2555408,18 L33.999,18 Z" id="header-logo-path-5"></path></defs><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M9.13638752,50.1738853 L9.13638752,0.275153484 L-4.54747351e-13,0.275153484 L-4.54747351e-13,50.1738853 L9.13638752,50.1738853 Z M32.6507879,51.2983638 C43.4738931,51.2983638 51.2749625,43.5675744 51.2749625,32.1822299 C51.2749625,20.7968855 43.4738931,13.066096 32.6507879,13.066096 C21.7574028,13.066096 13.9563335,20.7968855 13.9563335,32.1822299 C13.9563335,43.5675744 21.7574028,51.2983638 32.6507879,51.2983638 Z M32.6507879,43.5675744 C26.9581157,43.5675744 23.2332808,39.1399404 23.2332808,32.1822299 C23.2332808,25.3650792 26.9581157,20.7968855 32.6507879,20.7968855 C38.2731802,20.7968855 41.9980152,25.3650792 41.9980152,32.1822299 C41.9980152,39.1399404 38.2731802,43.5675744 32.6507879,43.5675744 Z M75.8435614,51.157804 C84.979949,51.157804 91.7970997,43.7081342 91.7970997,32.1822299 C91.7970997,20.7968855 85.1205088,13.2066558 75.9138414,13.2066558 C71.2753677,13.2066558 67.6910926,14.8230936 65.0907361,18.0559692 L65.0907361,0.275153484 L55.9543486,0.275153484 L55.9543486,50.1738853 L64.458217,50.1738853 L64.458217,45.6056916 C66.9882935,49.3305265 70.7834084,51.157804 75.8435614,51.157804 Z M73.7351643,43.2161748 C68.4641715,43.2161748 64.7393366,38.9993806 64.7393366,32.1822299 C64.7393366,25.4353591 68.4641715,21.0780051 73.8054442,21.0780051 C79.1467169,21.0780051 82.5201523,25.4353591 82.5201523,32.1822299 C82.5201523,38.9291007 79.0061571,43.2161748 73.7351643,43.2161748 Z M113.976182,51.2983638 C120.090534,51.2983638 124.939847,49.4008064 130,44.2703734 L124.869567,38.6479811 C122.62061,40.5455385 120.793333,41.8105768 119.317455,42.5133758 C117.911857,43.2161748 116.225139,43.5675744 114.187022,43.5675744 C108.21323,43.5675744 104.910074,40.1238591 104.066715,34.5717466 L129.85944,34.5717466 C129.92972,33.5175481 130,32.3227897 130,30.9874715 C130,19.7426869 123.955928,13.066096 113.203103,13.066096 C102.028598,13.066096 95.1411676,21.2185649 95.1411676,32.3930696 C95.1411676,43.848694 102.379998,51.2983638 113.976182,51.2983638 Z M121.074452,28.0357156 L104.277555,28.0357156 C105.331754,23.1864022 108.21323,20.2346462 112.921983,20.2346462 C117.771297,20.2346462 120.723053,23.1864022 121.074452,28.0357156 Z" fill-opacity="0.80345826" fill="#000000" fill-rule="nonzero"></path><g transform="translate(144.000000, 0.000000)"><g transform="translate(18.000000, 18.000000)"><mask fill="white"><use xlink:href="#header-logo-path-1"></use></mask><use fill="#F34747" fill-rule="nonzero" transform="translate(17.000000, 17.000000) rotate(-360.000000) translate(-17.000000, -17.000000) " xlink:href="#header-logo-path-1"></use></g><g><mask fill="white"><use xlink:href="#header-logo-path-3"></use></mask><use fill="#00DDB3" fill-rule="nonzero" transform="translate(17.000000, 17.000000) rotate(-360.000000) translate(-17.000000, -17.000000) " xlink:href="#header-logo-path-3"></use></g><mask fill="white"><use xlink:href="#header-logo-path-5"></use></mask><use fill="#333333" fill-rule="nonzero" xlink:href="#header-logo-path-5"></use></g></g></g></svg></div>
+        <div class="link-container">
+            <a href="#" class="nav-links">Overview</a>
+            <a href="#" class="nav-links">Examples</a>
+            <a href="#" class="nav-links">Tour</a>
+            <a href="#" class="nav-links">Blog</a>
+            <a href="#" class="nav-links">Help</a>
+        </div>
+        <button class="button button-small">download</button>
+    </nav>
+    <main>
+        <div class="home-body">
+            <div class="herosection">
+                <div class="herotext">
+                    <div>
+                        <h1 class="section-heading">
+                            Train apps to
+                        </h1>
+                        <br>
+                        <span id="dynamic-text" class="section-dynamic-text green-text">Identify plants</span>
+                    </div>
+                    <p class="section-text">Lobe helps you train machine learning models with a free, easy to use tool.</p>
+                    <div class="hero-buttons">
+                        <button class="largebutton green">download</button>
+                        <button class="largebutton outline-button">watch tour <svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1"><title>Watch Tour</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-362.000000, -12.000000)" fill-rule="nonzero"><g transform="translate(232.000000, 12.000000)"><g transform="translate(130.000000, 0.000000)"><circle stroke="#00E1B1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" cx="19.5" cy="19.5" r="11.5"></circle><path d="M17.4902612,14.8382719 L24.2283102,18.6284245 C24.709668,18.8991883 24.8803883,19.5089034 24.6096245,19.9902612 C24.5198357,20.1498857 24.3879346,20.2817868 24.2283102,20.3715755 L17.4902612,24.1617281 C17.0089034,24.4324919 16.3991883,24.2617716 16.1284245,23.7804138 C16.0442285,23.6307321 16,23.4618894 16,23.2901525 L16,15.7098475 C16,15.1575627 16.4477153,14.7098475 17,14.7098475 C17.1717369,14.7098475 17.3405796,14.754076 17.4902612,14.8382719 Z" fill="#00E1B1"></path></g></g></g></g></svg></button>
+                    </div>
+                </div>
+                <div class="hero-video">
+                    <video autoplay loop muted>
+                        <source src="video/lobe-herovideo.mp4" type="video/mp4">
+                        <!-- <source src="your_video.ogg" type="video/ogg"> -->
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="hero-arrow">
+                    <a href="#machine-learning">
+                        <svg width="58px" height="24px" viewBox="0 0 58 24" version="1.1"><title>See More</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(-771.000000, -986.000000)" stroke="#000000" stroke-width="3"><g transform="translate(771.000000, 986.000000)"><polyline id="download-arrow" points="8 8 29 16 50 8"></polyline></g></g></g></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section id="machine-learning" class="section machine-learning">
+            <div class="section-content">
+                <h1 class="section-heading">
+                    Machine learning made <span class="green">easy</span>
+                </h1>
+                <p class="section-text">
+                    Lobe has everything you need to bring your machine learning ideas to life. Just show it examples of what you want it to learn, and it automatically trains a custom machine learning model that can be shipped in your app.
+                </p>
+            </div>
+            <div class="section-image-container">
+                <img src="images/screenshot@2x.jpg" alt="">
+            </div>
+            <div class="section-content">
+                <div class="features-container">
+                    <div class="tip-cards tip-card-features">
+                        <div class="tip-card">
+                            <div class="tip-card-header">
+                                <div class="tip-card-icon"><i class='bx bxs-bulb'></i></div>
+                                <h3>Easy to use</h3>
+                            </div>
+                            <div class="tip-card-content">
+                                <p>Designed to be easy enough for anyone to use. No code or experience required.</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-card-header">
+                                <div class="tip-card-icon"><i class='bx bxs-lock-alt' ></i></div>
+                                <h3>Free and private</h3>
+                            </div>
+                            <div class="tip-card-content">
+                                <p>Train for free on your own computer without uploading your data to the cloud.</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-card-header">
+                                <div class="tip-card-icon"><i class='bx bxs-grid-alt' ></i></div>
+                                <h3>Export Anywhere</h3>
+                            </div>
+                            <div class="tip-card-content">
+                                <p>Available for Mac and Windows. Export your model and ship it on any platform you choose.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="project-template">
+                <div class="project-header">
+                    <h2 class="green">Project <span>Template</span></h2>
+                    <p>Lobe will automatically select the right machine learning architecture for your project. Image classification is available now, with more templates coming soon.</p>
+                </div>
+                <div class="tip-cards">
+                    <div class="tip-card">
+                        <div class="tip-card-header"><video src="video/image-classification.mp4"></video></div>
+                        <div class="tip-card-content">
+                            <h3>image classification</h3>
+                            <p>Label an image based on its content.</p>
+                        </div>
+                        <div class="tip-card-availability">Available now</div>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-card-header"><video src="video/object-detection.mp4"></video></div>
+                        <div class="tip-card-content">
+                            <h3>Object detection</h3>
+                            <p>Locate an object inside of an image.</p>
+                        </div>
+                        <div class="tip-card-availability">coming soon</div>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-card-header"><video src="video/data-classification.mp4"></video></div>
+                        <div class="tip-card-content">
+                            <h3>Data classification</h3>
+                            <p>Label data in a table based on its content.</p>
+                        </div>
+                        <div class="tip-card-availability">coming soon</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ltu-overview section">
+            <div class="section-content">
+                <h2 class="section-heading">Label, Train, <span class="green">Use</span></h2>
+                <p class="section-text">Lobe simplifies the process of machine learning into three easy steps. Collect and label your images. Train your model and understand your results. Then play, improve, and export your model.</p>
+    
+            </div>
+            <div class="label-your-images">
+                <div class="ltu-video"><video src="video/label your images.mp4"></video></div>
+                <div class="section-content">
+                    <h3><span class="green">Label</span> Your images</h3>
+                    <p>Collect bursts using your webcam, or drag in a folder of images from your computer. Then quickly label your images to create a machine learning dataset.</p>
+                </div>
+                
+            </div>
+            <div class="train-your-model">
+                <div class="ltu-video"><video src="video/train automatically.mp4"></video></div>
+                <div class="section-content">
+                    <h3><span class="green">Train</span> Automatically</h3>
+                    <p>Automatically train on your own computer without any setup or configuration. Understand the strengths and weaknesses of your model with live visual results.</p>
+                </div>
+                
+            </div>
+            <div class="use-your-model">
+                <div class="ltu-video"><video src="video/use your model.mp4"></video></div>
+                <div class="section-content">
+                    <h3><span class="green">Use</span> Your Model</h3>
+                    <p>Use your model with your webcam or images from your computer. Improve your results by giving your model feedback on its predictions, then finally export it to your app.</p>
+                </div>
+                
+            </div>
+        </section>
+    
+        <!-- Export anywhere -->
+        <div class="section--dark">
+            <section class="section export-anywhere">
+                <div class="section-content">
+                    <h2 class="section-heading">
+                        <span class="green">Export</span> <div class="dynamic-text">Anywhere</div>
+                    </h2>
+                    <p class="section-text">When you are done, you can export your model to a variety of industry standard formats and ship it on any platform you choose.</p>
+                    <a href="#" target="_blank" class="learn-more">Learn more <i class='bx bx-chevron-right'></i></a>
+                </div>
+                <div class="app-bubbles-container">
+                    <div class="app-bubble app-bubble-active">
+    
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <a href="#" id="t-box1">
+                        <div class="testimonial-header">
+                            <img src="" alt="profile pic">
+                            <div class="testimonial-text">As soon as I used Lobe I was completely blown away. I don’t have to spend days trying to learn machine learning. Simply label some images and boom, it really just works.</div>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-name">Chris cachor</div>
+                            <div class="testimonial-company">Software Engineer</div>
+                        </div>
+                    </a>
+                    <a href="#" id="t-box2">
+                        <div class="testimonial-header">
+                            <img src="" alt="profile pic">
+                            <div class="testimonial-text">As soon as I used Lobe I was completely blown away. I don’t have to spend days trying to learn machine learning. Simply label some images and boom, it really just works.</div>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-name">Chris cachor</div>
+                            <div class="testimonial-company">Software Engineer</div>
+                        </div>
+                    </a>
+                    <a href="#" id="t-box3">
+                        <div class="testimonial-header">
+                            <img src="" alt="profile pic">
+                            <div class="testimonial-text">As soon as I used Lobe I was completely blown away. I don’t have to spend days trying to learn machine learning. Simply label some images and boom, it really just works.</div>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-name">Chris cachor</div>
+                            <div class="testimonial-company">Software Engineer</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="section section-examples">
+                <div class="section-content">
+                    <h2 class="section-heading">
+                        Lobe <span class="green">Examples</span>
+                    </h2>
+                </div>
+                <div class="carousels-container">
+                    <div class="carousel">
+                        <div class="carousel-content"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section final-section">
+                <h2 class="section-heading">Train your app with lobe</h2>
+                <button class="large-download-button">Download</button>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <figure class="footer-logo">
+                    <svg width="196px" height="52px" viewBox="0 0 196 52" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><path d="M14.7318403,-3.55271368e-15 L23.7444592,-3.13837756e-15 C27.3105342,-3.7934549e-15 28.6036791,0.371302445 29.9073828,1.06853082 C31.2110865,1.76575919 32.2342408,2.78891348 32.9314692,4.09261719 C33.6286976,5.39632089 34,6.68946584 34,10.2555408 L34,23.7444592 C34,27.3105342 33.6286976,28.6036791 32.9314692,29.9073828 C32.2342408,31.2110865 31.2110865,32.2342408 29.9073828,32.9314692 C28.6036791,33.6286976 27.3105342,34 23.7444592,34 L10.2555408,34 C6.68946584,34 5.39632089,33.6286976 4.09261719,32.9314692 C2.78891348,32.2342408 1.76575919,31.2110865 1.06853082,29.9073828 C0.371302445,28.6036791 -1.02954229e-16,27.3105342 1.77192988e-16,23.7444592 L0,15.0409072 L0,15.0409072 L14.7318403,-3.55271368e-15 Z" id="header-logo-path-1"></path><path d="M10.2555408,-3.9670498e-15 L23.7444592,-3.13837756e-15 C27.3105342,-3.7934549e-15 28.6036791,0.371302445 29.9073828,1.06853082 C31.2110865,1.76575919 32.2342408,2.78891348 32.9314692,4.09261719 C33.6286976,5.39632089 34,6.68946584 34,10.2555408 L34,19 L34,19 L19.5,34 L10.2555408,34 C6.68946584,34 5.39632089,33.6286976 4.09261719,32.9314692 C2.78891348,32.2342408 1.76575919,31.2110865 1.06853082,29.9073828 C0.371302445,28.6036791 1.60494146e-16,27.3105342 -2.76224082e-16,23.7444592 L2.76224082e-16,10.2555408 C-1.60494146e-16,6.68946584 0.371302445,5.39632089 1.06853082,4.09261719 C1.76575919,2.78891348 2.78891348,1.76575919 4.09261719,1.06853082 C5.39632089,0.371302445 6.68946584,-3.31197246e-15 10.2555408,-3.9670498e-15 Z" id="header-logo-path-3"></path><path d="M33.999,18 L34,23.7444592 C34,27.3105342 33.6286976,28.6036791 32.9314692,29.9073828 C32.2342408,31.2110865 31.2110865,32.2342408 29.9073828,32.9314692 C28.6036791,33.6286976 27.3105342,34 23.7444592,34 L18,34 L18,28.2555408 C18,24.6894658 18.3713024,23.3963209 19.0685308,22.0926172 C19.7657592,20.7889135 20.7889135,19.7657592 22.0926172,19.0685308 C23.3963209,18.3713024 24.6894658,18 28.2555408,18 L33.999,18 Z" id="header-logo-path-5"></path></defs><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M9.13638752,50.1738853 L9.13638752,0.275153484 L-4.54747351e-13,0.275153484 L-4.54747351e-13,50.1738853 L9.13638752,50.1738853 Z M32.6507879,51.2983638 C43.4738931,51.2983638 51.2749625,43.5675744 51.2749625,32.1822299 C51.2749625,20.7968855 43.4738931,13.066096 32.6507879,13.066096 C21.7574028,13.066096 13.9563335,20.7968855 13.9563335,32.1822299 C13.9563335,43.5675744 21.7574028,51.2983638 32.6507879,51.2983638 Z M32.6507879,43.5675744 C26.9581157,43.5675744 23.2332808,39.1399404 23.2332808,32.1822299 C23.2332808,25.3650792 26.9581157,20.7968855 32.6507879,20.7968855 C38.2731802,20.7968855 41.9980152,25.3650792 41.9980152,32.1822299 C41.9980152,39.1399404 38.2731802,43.5675744 32.6507879,43.5675744 Z M75.8435614,51.157804 C84.979949,51.157804 91.7970997,43.7081342 91.7970997,32.1822299 C91.7970997,20.7968855 85.1205088,13.2066558 75.9138414,13.2066558 C71.2753677,13.2066558 67.6910926,14.8230936 65.0907361,18.0559692 L65.0907361,0.275153484 L55.9543486,0.275153484 L55.9543486,50.1738853 L64.458217,50.1738853 L64.458217,45.6056916 C66.9882935,49.3305265 70.7834084,51.157804 75.8435614,51.157804 Z M73.7351643,43.2161748 C68.4641715,43.2161748 64.7393366,38.9993806 64.7393366,32.1822299 C64.7393366,25.4353591 68.4641715,21.0780051 73.8054442,21.0780051 C79.1467169,21.0780051 82.5201523,25.4353591 82.5201523,32.1822299 C82.5201523,38.9291007 79.0061571,43.2161748 73.7351643,43.2161748 Z M113.976182,51.2983638 C120.090534,51.2983638 124.939847,49.4008064 130,44.2703734 L124.869567,38.6479811 C122.62061,40.5455385 120.793333,41.8105768 119.317455,42.5133758 C117.911857,43.2161748 116.225139,43.5675744 114.187022,43.5675744 C108.21323,43.5675744 104.910074,40.1238591 104.066715,34.5717466 L129.85944,34.5717466 C129.92972,33.5175481 130,32.3227897 130,30.9874715 C130,19.7426869 123.955928,13.066096 113.203103,13.066096 C102.028598,13.066096 95.1411676,21.2185649 95.1411676,32.3930696 C95.1411676,43.848694 102.379998,51.2983638 113.976182,51.2983638 Z M121.074452,28.0357156 L104.277555,28.0357156 C105.331754,23.1864022 108.21323,20.2346462 112.921983,20.2346462 C117.771297,20.2346462 120.723053,23.1864022 121.074452,28.0357156 Z" fill-opacity="0.80345826" fill="#000000" fill-rule="nonzero"></path><g transform="translate(144.000000, 0.000000)"><g transform="translate(18.000000, 18.000000)"><mask fill="white"><use xlink:href="#header-logo-path-1"></use></mask><use fill="#F34747" fill-rule="nonzero" transform="translate(17.000000, 17.000000) rotate(-360.000000) translate(-17.000000, -17.000000) " xlink:href="#header-logo-path-1"></use></g><g><mask fill="white"><use xlink:href="#header-logo-path-3"></use></mask><use fill="#00DDB3" fill-rule="nonzero" transform="translate(17.000000, 17.000000) rotate(-360.000000) translate(-17.000000, -17.000000) " xlink:href="#header-logo-path-3"></use></g><mask fill="white"><use xlink:href="#header-logo-path-5"></use></mask><use fill="#333333" fill-rule="nonzero" xlink:href="#header-logo-path-5"></use></g></g></g></svg>
+                </figure>
+                <div class="footer-copywrite">
+                    <div class="footer-copywrite-line">A product by microsoft</div>
+                    <div class="footer-copyrite-line">All rights reserved</div>
+                    <div class="footer-copyrite-line">&nbsp; Microsoft 2021</div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-column-heading">About</div>
+                <div class="footer-column-link-container">
+                    <a href="#">download</a>
+                </div>
+                <div class="footer-column-link-container"><a href="#">overview</a></div>
+                <div class="footer-column-link-container"><a href="#">Examples</a></div>
+                <div class="footer-column-link-container"><a href="#">Blog</a></div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-column-heading">General</div>
+                <div class="footer-column-link-container">
+                    <a href="#">Notice</a>
+                </div>
+                <div class="footer-column-link-container"><a href="#">License</a></div>
+                <div class="footer-column-link-container"><a href="#">Press Inquiry</a></div>
+                <div class="footer-column-link-container"><a href="#">Press Image</a></div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-column-heading">Resources</div>
+                <div class="footer-column-link-container">
+                    <a href="#">Help</a>
+                </div>
+                <div class="footer-column-link-container"><a href="#">Tour</a></div>
+                <div class="footer-column-link-container"><a href="#">Contact</a></div>
+                <div class="footer-column-link-container"><a href="#">Privacy</a></div>
+            </div>
+            <div class="footer-social-links">
+                <a href="#" class="footer-social-link"><i class='bx bxl-reddit' ></i></a>
+                <a href="#" class="footer-social-link"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="footer-social-link"><i class='bx bxl-youtube' ></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script/navigation.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@import "./../1\ -\ helpers/_variables";
+@import "./../1\ -\ helpers/_mixins";
+@import "./../3\ -\ Layouts/_layouts";
+@import "./../3\ -\ Layouts/_navigation";
+@import "./../3\ -\ Layouts/_button";
+@import "./../5\ -\ Template/_video"; 
+@import "./../5\ -\ Template/image"; 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: $secondaryColor;
+    font-family: "Darker Grotesque", "Bahnschrift";
+    background-color: #fff;
+    h1, h2, span{
+        font-size: 80px;
+        font-weight: 900;
+    }
+
+    h3{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    
+    a{
+        text-decoration: none;
+        cursor: pointer;
+        color: $secondaryColor;
+    }
+    span{ color: $primaryColor; }
+    button{ color: $secondaryColor2; border: none; outline: none; text-transform: capitalize; font-weight: 600; @include flexCenter(row, center, center)}
+    // section{
+    //     height: 100svh;
+    // }
+}
+
+
+
