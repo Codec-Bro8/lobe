@@ -20,15 +20,19 @@ body{
                 gap: 20px;
                 padding-bottom: 50px;
                 span#dynamic-text{
-                    line-height: 0px;
-                    opacity: 0; /* Initially hidden */
-                    transition: opacity 0.4s ease-in-out; 
+                    line-height: 0px; /* Initially hidden */ 
                     scale: 1;/* Define animation properties */
                 }
-                #dynamic-text.visible {
-                    opacity: 1; /* Fully visible */
-                    scale: 0;
+                .visible {
+                    opacity: 1; /* Text is fully visible */
+                    transition: opacity 2s ease-in-out; /* Fade effect duration and timing function */
                   }
+                  
+                .hidden {
+                    opacity: 0; /* Text is completely hidden */
+                    transition: opacity 2s ease-in-out; /* Fade effect duration and timing function */
+                  }
+                  
                 .section-text{
                     font-size: 26px;
                     font-weight: 600;
@@ -54,7 +58,148 @@ body{
     }
 }
 
+.section{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+    justify-content: center;
+    align-items: center;
+    .section-content.right-align{
+        align-items: flex-end;
+        text-align: left;
+        h3{
+            width: 70%;
+            text-align: left;
+        }
+    }
+    .section-content{
+        max-width: 1088px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        padding: 0 64px;
+        .section-heading{
+            width: 60%;
+            line-height: 70px;
+        }
+        .section-text{
+            width: 70%;
+        }
+    }
+    .section-image-container{
+        width: 80%;
+        img{ width: 100%;}
+    }
+    .tip-cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        .tip-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: start;
+            h4{
+                font-size: 24px;
+                font-weight: 800;
+            }
+            p{
+                font-size: 24px;
+            }
+            .tip-card-icon{
+                background: $primaryColor;
+                width: 50px;
+                color: $secondaryColor2;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                border-radius: 20px;
+            }
+        }
+    }
+    .project-template{
+        padding-top: 100px;
+        gap: 60px;
+        .tip-card{
+            background: $secondaryColor2;
+            padding: 32px 40px;
+            border-radius: 28px;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            .tip-card-header{
+                width: 80%;
+            }
+            .tip-card-content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                h4{text-transform: capitalize;}
+            }
+            .tip-card-availability{
+                padding: 0 10px;
+                background-color: $offWhite;
+                border-radius: 20px;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .green{
+                background-color: $primaryColor;
+                color: $secondaryColor2;
+            }
+        }
+    }
+    .margin-adjust{
+        .section-content{
+            margin-top: -300px;
+            
+        }
+        padding: 0;
+    }
+    .ltu-video{
+        width: 140%;
+    }
+}
+.ltu-overview{
+    overflow: hidden;
+}
+.dark{
+    background-color: #f2f3f5;
+}
 
+.learn-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i{align-self: flex-end;}
+}
+.testimonial-c{
+    background: $offWhite;
+    width: 100%;
+}
+.testimonial{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 1088px;
+    a{
+        background: $secondaryColor2;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: column;
+        gap: 40px;
+        padding: 32px;
+        border-radius: 28px;
+    }
+}
 /* ANIMATIONS */
 @keyframes floating {
     0% { transform: translateY(0px); }
